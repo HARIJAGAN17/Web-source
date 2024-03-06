@@ -13,7 +13,14 @@
     .container {
       color: white;
       border: 5px solid gold;
-      display: flex;
+      display: inline-flex;
+      flex-direction: column;
+    }
+    /* .red,.orange,.yellow,.green,.blue,.indigo,.purple{
+      flex-basis: 100px;
+    } */
+    .container>*{
+      flex-basis: 100px;
     }
 
     /*
