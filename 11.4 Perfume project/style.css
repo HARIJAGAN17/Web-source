@@ -113,3 +113,40 @@ nav ul li a:hover::after{
     font-weight: 40px; /* This should be font-size */
  }
  
+
+ .whole{
+    background-color: #282828;
+ }
+ .Footer{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 30%;
+    gap: 5px;
+
+
+ }
+
+ .parabox{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start ;
+    height: 300px;
+    color: white;
+    border-bottom: none;
+    
+ }
+ .parabox h1,p{
+    margin-top: 20px;
+    margin-left: 5px;
+ }
+
+ .Footer h4{
+    color: white;
+ }
+
+ .rights{
+    margin-top: 30px;
+    margin-left: 20px;
+ }
