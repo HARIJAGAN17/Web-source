@@ -36,3 +36,6 @@
 // n = n*range;
 // Math.floor(n)+1;
 // result ^
+
+//Arrays
+//var arr = [];
