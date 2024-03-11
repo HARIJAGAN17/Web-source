@@ -9,3 +9,6 @@ console.log(name);
 //alert("myname :"+myname);
 
 //naming conventions rule;
+
+//length
+console.log(name.length);
