@@ -12,3 +12,7 @@ console.log(name);
 
 //length
 console.log(name.length);
+
+//slice is like substring
+
+console.log(name.slice(0,2));
