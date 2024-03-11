@@ -39,3 +39,7 @@
 
 //Arrays
 //var arr = [];
+
+//includes return boolean
+// var arr = [];
+// arr.includes();
