@@ -26,3 +26,13 @@
 //     var cost = bottles*2;
 //     return cost;
 // }
+
+//Math random
+//Math.random();
+
+// fomrulae
+
+// n = Math.random();
+// n = n*range;
+// Math.floor(n)+1;
+// result ^
