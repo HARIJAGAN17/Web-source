@@ -1,8 +1,8 @@
 $("button").css("color","red");
 
-$("button").click(function(){
-    $("button").css("background","pink");
-});
+// $("button").click(function(){
+//     $("button").css("background","pink");
+// });
 
 //challenge
 
@@ -18,3 +18,11 @@ $(document).keydown(function(event){
 // $("h1").on("mouseout",function(){
 //     $("h1").css("background","orange");
 // })
+
+
+//animate
+$("button").click(function(){
+    $("h1").animate({margin:50});
+});
+
+//chain events using .slideup().slidedown()...
