@@ -13,6 +13,9 @@ function nextSequence()
     $("#"+randomChosenColour).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
     var audio = new Audio("sounds/"+randomChosenColour+".mp3");
     audio.play();
+    
+    $("#level-title").text("level "+level);
+    level++;
 }
 
 $(".btn").click(function(){
@@ -35,3 +38,7 @@ function animatePress(currentColour)
         $("."+currentColour).removeClass("pressed");
     },100);
 }
+
+var level =0;
+$(document).keydown(nextSequence);
+
