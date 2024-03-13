@@ -17,8 +17,18 @@ function nextSequence()
 
 $(".btn").click(function(){
     var userChosenColour = $(this).attr("id");
+    playSound(userChosenColour);
     userClickedPattern.push(userChosenColour);
-    console.log(userClickedPattern);
 });
 
+function playSound(name)
+{
+    var audio = new Audio("sounds/"+name+".mp3");
+    audio.play();
+}
+
+function animatePress(currentColour)
+{
+
+}
 //nextSequence();
