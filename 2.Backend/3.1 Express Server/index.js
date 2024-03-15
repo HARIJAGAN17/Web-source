@@ -8,12 +8,24 @@ app.get("/",(req,res)=>{
    res.send("<h1>Hello started</h1>");
 });
 
-app.get("/about",(req,res)=>{
-  res.send("<h1>About page</h1>")
+app.post("/register", (req, res) => {
+  //Do something with the data
+  res.sendStatus(201);
 });
-app.get("/contact",(req,res)=>{
-  res.send("<h1>Contact page</h1>")
+
+app.put("/user/angela", (req, res) => {
+  res.sendStatus(200);
 });
+
+app.patch("/user/angela", (req, res) => {
+  res.sendStatus(200);
+});
+
+app.delete("/user/angela", (req, res) => {
+  //Deleting
+  res.sendStatus(200);
+});
+
 
 
 
