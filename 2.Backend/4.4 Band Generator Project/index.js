@@ -3,7 +3,6 @@ import bodyParser from "body-parser";
 
 const app = express();
 const port = 3000;
-
 //Step 3 - Make the styling show up.
 //Hint 1: CSS files are static files!
 //Hint 2: The header and footer are partials.
@@ -11,12 +10,21 @@ const port = 3000;
 
 //Step 4 - Add a dynamic year to the footer.
 //Hint: Google to find out how to get the current year using JS.
-
+app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
   //Step 1 - Make the get route work and render the index.ejs file.
+  //console.log(randomGenerator());
+  res.render("index.ejs");
 });
+
+function randomGenerator()
+{
+  var index1 = Math.floor(Math.random()*adj.length);
+  var index2 = Math.floor(Math.random()*noun.length);
+  return adj[index1]+" "+noun[index2];
+}
 
 app.post("/submit", (req, res) => {
   //Step 2 - Make the generate name functionality work
@@ -26,6 +34,9 @@ app.post("/submit", (req, res) => {
   //scroll down to see the two arrays.
   //2. Send the index.ejs as a response and add the adjective and noun to the res.render
   //3. Test to make sure that the random words display in the h1 element in index.ejs
+
+  var bandName = randomGenerator();
+  res.render("index.ejs",{bandName});
 });
 
 app.listen(port, () => {
