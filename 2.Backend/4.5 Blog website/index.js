@@ -15,9 +15,9 @@ app.get("/",(req,res)=>{
 });
 
 
-app.post("/", (req, res) => {
+app.post("/submit", (req, res) => {
   console.log(req.body); // Logging the form data to the console
-  res.redirect("/"); // Sending a response back to the client
+  res.render("index.ejs"); // Sending a response back to the client
 });
 
 app.listen(port,()=>{

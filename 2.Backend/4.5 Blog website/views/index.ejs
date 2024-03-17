@@ -24,7 +24,7 @@
         </div>
         <div class="post" >
             <div class="twitter-box">
-                <form action="/" method="post" onsubmit=" return validateForm()">
+                <form action="/submit" method="post" onsubmit=" return validateForm()">
                 <textarea id="post-input" name="postContent" rows="4" placeholder="Write down the post!"></textarea>
                 <!-- You can add more elements like buttons for posting, etc., below this textarea -->
                 <button type="submit" class="btn btn-primary" id="createButton">Create</button>
@@ -53,6 +53,10 @@
         }
         function toggleClosePostForm(){
           var postClose = document.querySelector(".post");
+          const postcontent = document.getElementById("post-input");
+          document.getElementById("closeButton").addEventListener("click",function(){
+            postcontent.value = "";
+          });
           postClose.style.display = "none";
         }
         function validateForm(){
