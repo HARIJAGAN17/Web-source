@@ -5,6 +5,7 @@ padding: 0;
 }
 .whole{
     color: white;
+    background-color: black;
 }
 .navbar{
     color: white;
@@ -15,7 +16,10 @@ padding: 0;
     padding:5px 5%;
     background-color: black;
 }
-
+.navbar h2 a{
+    text-decoration: none;
+    color: white;
+}
 .navbar ul {
     display: flex;
     gap: 30px;
@@ -48,7 +52,7 @@ padding: 0;
 }
 
 .content{
-    background-color: aqua;
+    /* background-color: aqua; */
     padding: 10%;
     display: grid;
     gap: 20px;
@@ -59,11 +63,11 @@ padding: 0;
 
 .card{
     border-radius: 10px;
-    background-color: red;
+    /* background-color: red; */
 }
 
 .create{
-    background-color: orange;
+    /* background-color: orange; */
     margin-top: 3%;
     display: flex;
     justify-content: center;
@@ -75,27 +79,37 @@ padding: 0;
     width: 100px;
     font-size: 30px;
 }
-.post{
-    background-color: black;
+.post {
     margin-top: 2%;
-    display: flex;
+    display: none;
     justify-content: center;
+    flex-direction: column; /* Change flex-direction to column to align items vertically */
+    align-items: center; /* Align items horizontally in the center */
+    gap: 10px;
 }
+
+.post button {
+    height: 50px;
+    width: 100px; /* Set width for buttons */
+}
+
 .twitter-box {
-    display: flex;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    width: 100%;
-    max-width: 600px; /* Adjust the max-width as needed */
+    width: 100%; /* Ensure the textarea takes full width */
+    max-width: 600px; /* Limit the maximum width of the textarea */
+    padding: 10px; /* Add padding for space */
+    border: 1px solid #ccc; /* Add a border for a cleaner look */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    resize: vertical; /* Allow vertical resizing */
+    font-size: 16px; /* Set font size */
 }
+
 .twitter-box textarea {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    resize: none; /* Prevent resizing */
-    font-size: 16px;
-    outline: none;
-    overflow-y: auto; /* Enable vertical scroll if content exceeds */
+    width: 100%; /* Ensure the textarea takes full width */
+    height: 150px; /* Set initial height (adjust as needed) */
+    border: none; /* Remove default border */
+    outline: none; /* Remove default outline */
+    resize: none; /* Disable resizing */
+    font-size: 16px; /* Set font size */
+    padding: 5px; /* Add padding for space */
+    margin-bottom: 10px; /* Add margin to separate from buttons */
 }
