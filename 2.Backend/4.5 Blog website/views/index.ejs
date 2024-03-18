@@ -39,27 +39,43 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
+
         function togglePostForm() {
             var postForm = document.querySelector('.post');
             postForm.style.display = "flex";
         }
+
         function toggleClosePostForm(){
-          var postClose = document.querySelector(".post");
-          const postcontent = document.getElementById("post-input");
-          document.getElementById("closeButton").addEventListener("click",function(){
-            postcontent.value = "";
-          });
-          postClose.style.display = "none";
+            var postClose = document.querySelector(".post");
+            const postcontent = document.getElementById("post-input");
+            document.getElementById("closeButton").addEventListener("click",function(){
+                postcontent.value = "";
+            });
+            postClose.style.display = "none";
         }
+
         function validateForm(){
-          var postValid = document.getElementById("post-input").value.trim();
-          if(!postValid)
-          {
-            alert("please write something");
-            return false;
-          }
-          return true;
+            var postValid = document.getElementById("post-input").value.trim();
+            if(!postValid) {
+                alert("please write something");
+                return false;
+            }
+            return true;
         }
+
+        function initializeDeleteButtons() {
+            document.querySelectorAll('.deleteButton').forEach(button => {
+                button.addEventListener('click', function(event) {
+                    //add here
+                    
+                    event.preventDefault();
+                    var card = button.closest(".card");
+                    card.remove();
+                });
+            });
+        }
+
+        initializeDeleteButtons();
     </script>
 </body>
 </html>
