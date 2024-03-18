@@ -4,22 +4,21 @@ import bodyParser from "body-parser";
 const app = express();
 const port = 3000;
 
-//making css linking
-app.use(express.static("public"));
-app.use(bodyParser.urlencoded(
-  {extended:true}
-))
-//rendering main page
-app.get("/",(req,res)=>{
-  res.render("index.ejs");
-});
+var contentlist =[];
 
+app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get("/", (req, res) => {
+  res.render("index.ejs", { contentList: contentlist }); // Pass contentlist to index.ejs
+});
 
 app.post("/submit", (req, res) => {
-  console.log(req.body); // Logging the form data to the console
-  res.render("index.ejs"); // Sending a response back to the client
+  const content = req.body["postContent"];
+  contentlist.push(content);
+  res.render("index.ejs", { contentList: contentlist }); // Pass contentlist to index.ejs
 });
 
-app.listen(port,()=>{
- console.log("Listening to the port:"+port);
+app.listen(port, () => {
+  console.log("Listening to the port:" + port);
 });
