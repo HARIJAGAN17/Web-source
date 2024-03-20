@@ -3,10 +3,10 @@ import axios from "axios";
 
 const app = express();
 const port = 3000;
-const API_URL = "https://secrets-api.appbrewery.com/";
+const API_URL = "https://secrets-api.appbrewery.com";
 
 //TODO 1: Fill in your values for the 3 types of auth.
-const yourUsername = "";
+const yourUsername = ""; 
 const yourPassword = "";
 const yourAPIKey = "";
 const yourBearerToken = "";
@@ -15,10 +15,20 @@ app.get("/", (req, res) => {
   res.render("index.ejs", { content: "API Response." });
 });
 
-app.get("/noAuth", (req, res) => {
+app.get("/noAuth",async (req, res) => {
   //TODO 2: Use axios to hit up the /random endpoint
   //The data you get back should be sent to the ejs file as "content"
   //Hint: make sure you use JSON.stringify to turn the JS object from axios into a string.
+  try{
+    const response =  await axios.get(API_URL+"/random");
+    const result  = response.data;
+    const resultString = JSON.stringify(result);
+    res.render("index.ejs",{content:resultString});
+  }
+  catch(error){
+    res.status(404).send(error.message);
+    console.log(error);
+  }
 });
 
 app.get("/basicAuth", (req, res) => {
