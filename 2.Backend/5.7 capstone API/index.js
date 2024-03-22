@@ -30,7 +30,7 @@ app.post("/result", async (req, res) => {
         const urlId = response.data.data.id;
         const analysisUrl =  `https://www.virustotal.com/api/v3/analyses/${urlId}`
         const analysis = await axios.get(analysisUrl,config);
-        res.send(analysis.data.data);
+        res.render("index.ejs",{content:analysis.data.data});
     } catch (error) {
         res.status(error.response.status).send(error.response.data);
     }
