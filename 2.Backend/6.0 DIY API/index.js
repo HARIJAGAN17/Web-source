@@ -9,7 +9,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //1. GET a random joke
 
+app.get("/random",(req,res)=>{
+   var len = jokes.length;
+   var random  = Math.floor(Math.random()*len);
+   var joke = jokes[random];
+   res.json(joke);
+});
+
 //2. GET a specific joke
+app.get("/jokes/:id",(req,res)=>{
+  const id = parseInt(req.params.id);
+  console.log(id);
+  const joke = jokes.find((joke)=> joke.id===id);
+  res.send(joke);
+})
 
 //3. GET a jokes by filtering on the joke type
 
