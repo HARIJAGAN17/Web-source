@@ -22,7 +22,7 @@ app.get("/jokes/:id",(req,res)=>{
   //console.log(id);
   const joke = jokes.find((joke)=> joke.id===id);
   res.json(joke);
-})
+});
 
 //3. GET a jokes by filtering on the joke type
 app.get("/filter",(req,res)=>{
@@ -30,7 +30,7 @@ app.get("/filter",(req,res)=>{
   const result = jokes.filter((joke)=>joke.jokeType === type);
   res.json(result);
   console.log(result);
-})
+});
 
 //4. POST a new joke
 app.post("/jokes",(req,res)=>{
@@ -46,7 +46,18 @@ app.post("/jokes",(req,res)=>{
  
 });
 //5. PUT a joke
+app.put("/jokes/:id",(req,res)=>{
 
+  const id = parseInt(req.params.id);
+  const jokeIndex = jokes.findIndex((joke)=> joke.id===id);
+  const changed = {
+    id:id,
+    jokeText:req.body["text"],
+    jokeType:req.body["type"],
+  }
+  jokes[jokeIndex] = changed;
+  res.json(changed);
+});
 //6. PATCH a joke
 
 //7. DELETE Specific joke
