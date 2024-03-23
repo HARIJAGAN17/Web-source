@@ -19,12 +19,18 @@ app.get("/random",(req,res)=>{
 //2. GET a specific joke
 app.get("/jokes/:id",(req,res)=>{
   const id = parseInt(req.params.id);
-  console.log(id);
+  //console.log(id);
   const joke = jokes.find((joke)=> joke.id===id);
-  res.send(joke);
+  res.json(joke);
 })
 
 //3. GET a jokes by filtering on the joke type
+app.get("/filter",(req,res)=>{
+  const type = req.query.type;
+  const result = jokes.filter((joke)=>joke.jokeType === type);
+  res.json(result);
+  console.log(result);
+})
 
 //4. POST a new joke
 
