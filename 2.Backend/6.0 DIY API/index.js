@@ -59,6 +59,26 @@ app.put("/jokes/:id",(req,res)=>{
   res.json(changed);
 });
 //6. PATCH a joke
+//6. PATCH a joke
+app.patch("/jokes/:id",(req,res)=>{
+  const id = parseInt(req.params.id);
+  const existJoke = jokes.find((joke)=> joke.id === id);
+
+  // Check if the joke with the specified ID exists
+  if (!existJoke) {
+    return res.status(404).json({ error: "Joke not found" });
+  }
+
+  const change = {
+    id: id,
+    // If req.body["text"] or req.body["type"] is undefined, fallback to existing values
+    jokeText: req.body["text"] || existJoke.jokeText,
+    jokeType: req.body["type"] || existJoke.jokeType,
+  }
+  const index = jokes.findIndex((joke)=> joke.id === id);
+  jokes[index] = change;
+  res.json(change);
+});
 
 //7. DELETE Specific joke
 
