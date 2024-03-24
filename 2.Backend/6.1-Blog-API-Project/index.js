@@ -46,7 +46,7 @@ app.get("/posts",(req,res)=>{
 });
 
 //CHALLENGE 2: GET a specific post by id
-app.get("/posts",(req,res)=>{
+app.get("/posts/:id",(req,res)=>{
   const id = parseInt(req.params.id);
   const index = posts.findIndex((joke)=>joke.id===id);
   res.json(posts[index]);
@@ -66,7 +66,20 @@ app.post("/posts",(req,res)=>{
 })
 
 //CHALLENGE 4: PATCH a post when you just want to update one parameter
-
+app.patch("/posts/:id",(req,res)=>{
+   const id = parseInt(req.params.id);
+   const index = posts.findIndex((joke)=>joke.id===id);
+   const existing = posts[index];
+   const change = {
+    id: id,
+    title : req.body.title || existing.title,
+    content: req.body.content || existing.content,
+    author: req.body.author || existing.author,
+    date: new Date(),
+   }
+   posts[index] = change;
+   res.json(posts)
+});
 //CHALLENGE 5: DELETE a specific post by providing the post id.
 
 app.listen(port, () => {
