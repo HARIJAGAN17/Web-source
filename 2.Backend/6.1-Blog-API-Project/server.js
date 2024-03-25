@@ -11,6 +11,9 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+//This is the server which render pages and retrive data
+//from the API
+
 // Route to render the main page
 app.get("/", async (req, res) => {
   try {

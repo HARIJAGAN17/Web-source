@@ -40,6 +40,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //Write your code here//
 
+//this api retrive the data through http standard requests from the database.
+
+//here the database was json based array post[{}{}].
+
 //CHALLENGE 1: GET All posts
 app.get("/posts",(req,res)=>{
    res.json(posts);
