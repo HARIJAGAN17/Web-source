@@ -3,11 +3,11 @@ import bodyParser from "body-parser";
 import pg from "pg";
 
 const db = new pg.Client({
-  user: "postgres",
+  user:"postgres",
   host: "localhost",
   database: "world",
-  password: "123456",
-  port: 5432,
+  password : "Iam22@33",
+  port : 5432,
 });
 
 const app = express();
@@ -16,7 +16,7 @@ const port = 3000;
 db.connect();
 
 let quiz = [];
-db.query("SELECT * FROM flags", (err, res) => {
+db.query("SELECT * FROM falgs", (err, res) => {
   if (err) {
     console.error("Error executing query", err.stack);
   } else {
