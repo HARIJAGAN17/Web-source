@@ -30,6 +30,17 @@ app.get("/", async (req, res) => {
   res.render("index.ejs",{countries:countries, total: countries.length})
 });
 
+app.post("/add",async (req,res)=>{
+
+  const country_name = req.body.country;
+  const result = await db.query("SELECT country_code from countries where country_name = $1",[country_name]);
+
+  if(result.rows.length!=0){
+    await db.query("INSERT INTO visted (country_code) VALUES($1)",[result.rows[0].country_code]);
+  }
+  res.redirect("/")
+});
+
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
