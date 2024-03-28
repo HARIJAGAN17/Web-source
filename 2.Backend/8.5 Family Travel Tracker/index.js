@@ -51,8 +51,11 @@ app.get("/", async (req, res) => {
     color: currentUser.color,
   });
 });
+
+
 app.post("/add", async (req, res) => {
   const input = req.body["country"];
+  const currentUser = await getCurrentUser();
 
   try {
     const result = await db.query(
@@ -64,9 +67,14 @@ app.post("/add", async (req, res) => {
     const countryCode = data.country_code;
     try {
       await db.query(
-        "INSERT INTO visited_countries (country_code) VALUES ($1)",
-        [countryCode]
+        "INSERT INTO visited_countries (country_code, user_id) VALUES ($1, $2)",
+        [countryCode, currentUser.id]
       );
+
+      // Remove this line, as it's redundant and may cause issues with rendering
+      // currentUserId = currentUser.id;
+
+      // Instead, keep the currentUserId as it is
       res.redirect("/");
     } catch (err) {
       console.log(err);
@@ -75,6 +83,7 @@ app.post("/add", async (req, res) => {
     console.log(err);
   }
 });
+
 
 app.post("/user", async (req, res) => {
   if (req.body.add === "new") {
@@ -88,6 +97,16 @@ app.post("/user", async (req, res) => {
 app.post("/new", async (req, res) => {
   //Hint: The RETURNING keyword can return the data that was inserted.
   //https://www.postgresql.org/docs/current/dml-returning.html
+
+  const name = req.body.name;
+  const color = req.body.color;
+
+  const result = await db.query("INSERT INTO users (name,color) VALUES($1,$2) RETURNING *;",[name,color]);
+
+  const id = result.rows[0].id;
+  currentUserId = id;
+
+  res.redirect("/");
 });
 
 app.listen(port, () => {
