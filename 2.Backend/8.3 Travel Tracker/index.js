@@ -13,6 +13,7 @@ const db = new pg.Client({
   port:5432
 })
 
+
 db.connect();
 
 app.use(bodyParser.urlencoded({ extended: true }));
