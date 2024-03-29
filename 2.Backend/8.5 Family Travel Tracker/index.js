@@ -71,10 +71,6 @@ app.post("/add", async (req, res) => {
         [countryCode, currentUser.id]
       );
 
-      // Remove this line, as it's redundant and may cause issues with rendering
-      // currentUserId = currentUser.id;
-
-      // Instead, keep the currentUserId as it is
       res.redirect("/");
     } catch (err) {
       console.log(err);
@@ -112,3 +108,4 @@ app.post("/new", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
+
