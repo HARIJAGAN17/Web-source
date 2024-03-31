@@ -63,6 +63,7 @@ app.post("/add", async (req, res) => {
       [input.toLowerCase()]
     );
 
+    console.log(result);
     const data = result.rows[0];
     const countryCode = data.country_code;
     try {
@@ -98,7 +99,7 @@ app.post("/new", async (req, res) => {
   const color = req.body.color;
 
   const result = await db.query("INSERT INTO users (name,color) VALUES($1,$2) RETURNING *;",[name,color]);
-
+  console.log(result);
   const id = result.rows[0].id;
   currentUserId = id;
 
