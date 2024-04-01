@@ -45,7 +45,7 @@ async function getTitle(){
 
 
 app.get("/", async (req, res) => {
-  
+
 const content = await getTitle();
 console.log(content);
 res.render("index.ejs", {
@@ -55,10 +55,15 @@ res.render("index.ejs", {
 });
 
 
-app.post("/add", (req, res) => {
-  const item = req.body.newItem;
-  items.push({ title: item });
-  res.redirect("/");
+app.post("/add", async (req, res) => {
+  const title = req.body.newItem;
+  console.log(title);
+  try {
+    await db.query("INSERT INTO items(title) VALUES($1)",[title]);
+    res.redirect("/");
+  } catch (error) {
+    res.send(error);
+  }
 });
 
 app.post("/edit", (req, res) => {});
