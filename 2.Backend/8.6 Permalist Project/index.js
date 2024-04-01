@@ -27,9 +27,11 @@ db.connect();
 //   { id: 2, title: "Finish homework" },
 // ];
 
-async function getTitle(){
-  let items = [];
+
+
+async function getTitle(){  
    const result = await db.query("SELECT id,title FROM items");
+   let items = [];
    result.rows.forEach((item)=>{
 
       const c1 = {
@@ -43,7 +45,7 @@ async function getTitle(){
 
 
 app.get("/", async (req, res) => {
-
+  
 const content = await getTitle();
 console.log(content);
 res.render("index.ejs", {
