@@ -58,6 +58,33 @@ app.post("/login", async (req, res) => {
 
   const email  = req.body.username;
   const password  = req.body.password;
+
+  try {
+    const currEmail = await db.query("SELECT * FROM users WHERE email = ($1)",[email]);
+
+    if(currEmail.rows.length>0)
+    {
+      const currpass = await db.query("SELECT password FROM users WHERE email = ($1)",[email]);
+      console.log(currpass);
+      if(currpass.rows[0].password === password)
+      {
+        res.render("secrets.ejs");
+      }
+      else
+      {
+        res.render("login.ejs",{message:"INVALID PASSWORD try again"});
+      }
+    }
+    
+    else
+    {
+      res.render("login.ejs",{message:"User not exist please register"});
+    }
+  } catch (error) {
+    res.send(error);
+  }
+
+
 });
 
 app.listen(port, () => {

@@ -1,6 +1,6 @@
 <%- include('partials/header') %>
 
-  <% if (message) { %>
+  <% if (locals.message) { %>
      <script>alert("<%= message %>")</script>
   <% } %>
   <div class="container mt-5">
