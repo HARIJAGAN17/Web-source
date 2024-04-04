@@ -41,7 +41,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
+ if(req.isAuthenticated()){
+  res.redirect("/secrets");
+ }else{
   res.render("login.ejs");
+ }
 });
 
 app.get("/register", (req, res) => {
@@ -57,17 +61,35 @@ app.get("/logout", (req, res) => {
   });
 });
 
-app.get("/secrets", (req, res) => {
-  if (req.isAuthenticated()) {
-    res.render("secrets.ejs");
+app.get("/secrets", async (req, res) => {
 
-    //TODO: Update this to pull in the user secret to render in secrets.ejs
+  
+  if (req.isAuthenticated()) {
+  const email = req.user.email;
+  const result =  await db.query("SELECT secret From users WHERE email = $1",[email]);
+  const data = result.rows[0].secret;
+  if (data) {
+    res.render("secrets.ejs", { secret: data });
+  } else {
+    res.render("secrets.ejs", { secret: "Jack Bauer is my hero." });
+  }
+  //TODO: Update this to pull in the user secret to render in secrets.ejs
+
   } else {
     res.redirect("/login");
   }
 });
 
 //TODO: Add a get route for the submit button
+app.get("/submit",(req,res)=>{
+  
+  if(req.isAuthenticated()){
+    res.render("submit.ejs");
+  }else{
+    res.render("login.ejs");
+  }
+
+})
 //Think about how the logic should work with authentication.
 
 app.get(
@@ -128,6 +150,16 @@ app.post("/register", async (req, res) => {
 
 //TODO: Create the post route for submit.
 //Handle the submitted data and add it to the database
+app.post("/submit",async(req,res)=>{
+  const email = req.user.email;
+ const secrets =  req.body.secret;
+ try {
+  await db.query("UPDATE users SET secret = $1 WHERE email = $2",[secrets,email]);
+  res.redirect("/secrets");
+ } catch (error) {
+  console.log(error);
+ }
+});
 
 passport.use(
   "local",
