@@ -8,18 +8,10 @@ function CreateArea(props) {
     const {value,name} = event.target;
 
     setInputText((prev)=>{
-      if(name === "title"){
-        return {
-          title : value,
-          content : prev.content
-        }
-      }else if(name === "content"){
-        return{
-          title: prev.title,
-          content:value,
-        }
+      return{
+        ...prev,[name]:value
       }
-    })
+    });
   }
 
  
