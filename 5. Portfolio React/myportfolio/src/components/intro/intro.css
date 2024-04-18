@@ -1,0 +1,57 @@
+#intro{
+    height: calc(100vh-7rem);
+    width: 100vw;
+    max-width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg{
+    position: absolute;
+    margin-top:  100px;
+    top: -1rem;
+    right: 0;
+    z-index: -1;
+    object-fit: cover;
+    height: 80vh;
+}
+
+.intro{
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.hello{
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.introName{
+    color: yellow;
+}
+.introPara{
+    font-size: medium;
+    font-weight: 100;
+}
+
+.btn{
+   background: white;
+   border: none;
+   color: black;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 3rem;
+   width: 9rem;
+   padding: 0 1rem;
+   border-radius: 2rem;
+   gap: 5px;
+
+}
