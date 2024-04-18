@@ -4,33 +4,16 @@
     box-sizing: border-box;
 }
 
-.box{
-    height: 200px;
-    width: 200px;
-    background-color: yellow;
-    margin-left: 50px;
-
+body{
+   height: 100vh;
+    background-image: url(./images/pngegg.png),
+    linear-gradient(to bottom,greenyellow,aqua);
+    background-repeat: repeat-y,no-repeat;
+    background-position: right;
+    background-size: 22%,auto;
 }
 
-.content{
-    background-color: red;
-    display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
-    grid-auto-rows: 200px;
-    gap: 10px;
-}
-h1{
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.content h1:nth-child(1){
-    
-    background-color: yellow;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    
-}
+
+
+
 
