@@ -34,7 +34,7 @@
 
     margin-top: 30px;
     text-align: left;
-    margin-left: 10px;
+    margin-left: 30px;
     border: none;
     border-radius: 4px;
     outline: none;
@@ -44,8 +44,8 @@
 .downloadButoon{
     
     padding: 5px 20px;
-    color: #E74833;
-    background-color: white;
+    color: white;
+    background-color: #E74833;
     font-family: 'Montserrat',sans-serif;
     font-weight: 300;
     font-size: 20px;
@@ -53,7 +53,7 @@
 
 .downloadButoon:hover{
     color: white;
-    background-color: #E74833;
+    background-color: #e74833b1;
     font-family: 'Montserrat',sans-serif;
     font-weight: 600;
 }
@@ -62,7 +62,7 @@
     color: white;
     background-color: transparent;
     border: 1px solid white !important;
-    padding: 5px 25px;
+    padding: 4px 25px;
     font-family: 'Montserrat',sans-serif;
     font-weight: 300;
     font-size: 20px;

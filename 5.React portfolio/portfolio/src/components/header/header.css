@@ -51,10 +51,11 @@
 }
 
 .header_right_button{
+    font-family: 'Montserrat',sans-serif;
     background-color: #E74833;
     color:beige;
     padding: 4px 15px;
     border-radius: 6px;
-    font-size: 22px;
+    font-size: 18px;
     cursor: pointer;
 }
