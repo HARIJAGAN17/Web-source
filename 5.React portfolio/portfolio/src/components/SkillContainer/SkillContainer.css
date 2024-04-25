@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.skillContainer{
+    display: flex;
+    background-image: linear-gradient(to right,#000000,#410425,#1E1B3B,#060C27);
+}
+.imageContainer{
+    text-align: center;
+    flex: 0.4;
+    margin-top: 50px;
+    margin-left: 60px;
+    margin-bottom: 50px;
+}
+.imageContainer img{
+
+    width: 400px;
+    background-size: contain;
+}
+
+.skiller{
+    flex: 0.6;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.skiller > h1{
+
+    color: white;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 40px;
+    margin-left: 400px;
+}
+
+
+.skillset {
+    
+    border: 1px solid grey;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+    row-gap: 50px;
+    column-gap: 20px;
+    max-width: 900px;
+    padding: 40px 10px;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%; /* Ensure boxes take full width of their container */
+  }
+  
+  .box h1 {
+    color: white;
+    text-decoration: underline;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 24px; /* Decrease font size for better fit */
+  }
+  
+  .box img {
+    width: 80px; /* Set a fixed width for the images */
+    height: 80px; /* Set a fixed height for the images */
+    object-fit: contain; /* Maintain aspect ratio */
+  }
+  
