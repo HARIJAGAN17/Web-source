@@ -3,9 +3,12 @@
 
 .header{
     color:#F5F5F5;
-    background-color: #244856;
+    background-image: linear-gradient(to right, #5E1948,#5C1545 , #01436A,#013E66);
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
 }
 
 .header_left{
@@ -48,7 +51,7 @@
 }
 
 .header_right_button{
-    background-color: rgb(28, 191, 174);
+    background-color: #E74833;
     color:beige;
     padding: 5px 20px;
     border-radius: 4px;
