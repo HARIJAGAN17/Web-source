@@ -1,0 +1,40 @@
+.projectCard>img{
+  height: 260px;
+  width: 290px;
+  border-radius: 5px;
+}
+
+.projectCard{
+   margin: 15px;
+   height: 260px;
+   width: 290px;
+   transition: trasnform 100ms ease-in-out;
+
+}
+
+.projectCard:hover{
+    color: white;
+    background-color:#E74833;
+    transform: scale(1.05);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.project_details{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.project_details > h4{
+    padding-bottom: 5px;
+}
+.project_details > p{
+    font-size: 15px ;
+}
