@@ -9,8 +9,8 @@ import css from '../../assets/css.png';
 import js from '../../assets/js.png';
 import nodejs from '../../assets/nodejs.png';
 import react from '../../assets/react.png';
-import c2 from '../../assets/c2.png';
 import sql from '../../assets/sql.png';
+import c2 from "../../assets/c2.gif";
 
 
 function SkillContainer() {
