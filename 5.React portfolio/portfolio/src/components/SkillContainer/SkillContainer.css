@@ -3,6 +3,8 @@
 .skillContainer{
     display: flex;
     background-image: linear-gradient(to right,#000000,#410425,#1E1B3B,#060C27);
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 .imageContainer{
     text-align: center;
