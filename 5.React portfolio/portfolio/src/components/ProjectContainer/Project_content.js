@@ -3,6 +3,7 @@ import dodgemine from '../../assets/Dodgemine.png'
 import fitness from '../../assets/fitnesszone.jpg';
 import dietify from "../../assets/dietify.jpg";
 import paper from "../../assets/papergram.jpg";
+import med3 from "../../assets/med3.0.jpg";
 
 const projects = [
     {
@@ -34,6 +35,12 @@ const projects = [
         title:"Dietify",
         desc:"A web-based AI-powered diet planning app that uses Flutter and OpenAI API to provide personalized diet plans based on user data.",
         link:"https://devpost.com/software/fitness-zone-9um05f",
+    },
+    {
+        image:med3,
+        title:"MedZone 3.0",
+        desc:"An accessible personal healthcare web app that utilizes PoseNet, React, Socket.io, and TensorFlow to enable users to consult doctors online, it's bolstered with blockchain technology leveraging Solidity and Web3 for enhanced security and crypto wallet payments.",
+        link:"https://health-link.netlify.app/home",
     },
    
 ]
