@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './components/header/header';
 import TopContainer from './components/TopContainer/TopContainer';
 import SkillContainer from './components/SkillContainer/SkillContainer';
+import './App.css';
 
 function App() {
   return (
