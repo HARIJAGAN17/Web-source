@@ -5,6 +5,7 @@ import SkillContainer from './components/SkillContainer/SkillContainer';
 import './App.css';
 import ProjectContainer from './components/ProjectContainer/ProjectContainer';
 import ExperienceContainer from './components/ExperienceContainer/ExperienceContainer';
+import Contact from './components/Contact/Contact';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <SkillContainer/>
       <ProjectContainer/>
       <ExperienceContainer/>
+      <Contact/>
     </div>
   )
 }
