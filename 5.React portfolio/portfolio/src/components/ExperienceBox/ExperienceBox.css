@@ -17,8 +17,8 @@
    }
    
                
-   .myview > h1{
-     color:white;
+   .myview > h4{
+     margin-bottom: 10px;
    }
    .myview:before, .myview:after{
     content: '';
