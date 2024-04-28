@@ -4,6 +4,7 @@ import TopContainer from './components/TopContainer/TopContainer';
 import SkillContainer from './components/SkillContainer/SkillContainer';
 import './App.css';
 import ProjectContainer from './components/ProjectContainer/ProjectContainer';
+import ExperienceContainer from './components/ExperienceContainer/ExperienceContainer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <TopContainer/>
       <SkillContainer/>
       <ProjectContainer/>
+      <ExperienceContainer/>
     </div>
   )
 }

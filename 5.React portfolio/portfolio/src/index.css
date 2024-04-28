@@ -2,3 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
+body{
+  background-image: linear-gradient(to right,#000000,#410425,#1E1B3B,#060C27);
+}
