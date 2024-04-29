@@ -12,10 +12,19 @@ function Modal(props) {
   const [content, setContent] = useState({ name: "", email: "", message: "" });
   
   const form = useRef();
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const {toasted} = props;
+  const {notToasted} = props;
 
-    
+  const sendEmail = (e) => {
+
+    e.preventDefault();
+    if (content.name.trim() === '' || content.email.trim() === '' || content.message.trim() === '') {
+      notToasted();
+      return;
+    }
+    else{
+      toasted();
+    }
 
     emailjs
       .sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, {
@@ -65,7 +74,7 @@ function Modal(props) {
           <button onClick={() => { props.onOverlay() }} className='formClose'>
             <img src={close} alt="close" />
           </button>
-          <button type="submit" className='sendButton'><img src={send} alt="send" /> Send</button>
+          <button type="submit" className='sendButton'><img src={send} alt="send"/> Send</button>
         </form>
       </div>
     </div>

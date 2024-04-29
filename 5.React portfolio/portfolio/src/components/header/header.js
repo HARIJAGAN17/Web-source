@@ -3,7 +3,7 @@ import {Link} from 'react-scroll';
 import './header.css'
 import Modal from '../ModalContainer/Modal';
 
-function Header() {
+function Header(props) {
 
   const[showModel,setModel] = useState(false);
 
@@ -35,7 +35,7 @@ function Header() {
             <h4>Contact</h4>
             </Link>
             <h4 className='header_right_button' onClick={()=>{handleModel()}}>Join me</h4>
-            {showModel&& <Modal onOverlay={()=>{handleModel()}}/>}
+            {showModel&& <Modal onOverlay={()=>{handleModel()}} toasted={props.toastFunction} notToasted={props.notToastFunction}/>}
         </div>
     </div>
   )
