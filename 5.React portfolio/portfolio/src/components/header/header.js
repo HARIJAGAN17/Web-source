@@ -13,9 +13,11 @@ function Header() {
 
   return (
     <div className='header'>
-        <div className='header_left'>
-            <h1>Develop<span>er</span></h1>
-        </div>
+        
+        <Link to='about' smooth='true' duration={700} className='header_left'>
+        <h1>Develop<span>er</span></h1>
+        </Link>
+        
         <div className='header_right'>
             <Link to='about' smooth='true' duration={700}>
             <h4>About</h4>
