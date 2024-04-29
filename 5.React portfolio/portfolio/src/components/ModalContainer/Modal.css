@@ -10,18 +10,96 @@
     align-items: center;
   }
   
-  .modalContent {
-    background-color: white;
+  .formContainer{
+
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form {
+    position: relative;
+    background-color: red;
     width: 700px;
     height: 400px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
-  }
-
-  .formContainer{
-
+    width: 100%;
+    margin: 30px auto 20px auto;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+  }
+
+  form input{
+    width: 400px;
+    border: none;
+    padding: 7px;
+    outline: none;
+    font-size: 1.2em;
+    font-family: inherit;
+    resize: none;
+    border-radius: 10px;
+  }
+
+  form textarea {
+    width: 500px;
+    border: none;
+    padding: 5px;
+    outline: none;
+    font-size: 1.2em;
+    font-family: inherit;
+    resize: none;
+    border-radius: 10px;
+  }
+
+  .formClose{
+    position: absolute;
+    right: -3px;
+    top: -15px;
+    background: grey;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .formClose img{
+    width: 90%;
+    height: 90%;
+  }
+
+  .sendButton {
+    position: absolute;
+    left: 40%;
+    bottom: 10px;
+    height: 30px;
+    width: 100px; 
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center; 
+    padding: 4px; 
+    background-color: #007bff; 
+    color: white; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+  }
+  
+  .sendButton img {
+    height: 20px; 
+    width: 20px; 
+  }
+  
+  .sendButton:hover {
+    background-color: #0056b3; 
   }
   
