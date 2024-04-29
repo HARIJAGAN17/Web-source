@@ -18,7 +18,7 @@
   
   form {
     position: relative;
-    background-color: red;
+    background-color: #006665;
     width: 700px;
     height: 400px;
     padding: 20px;
@@ -45,12 +45,15 @@
   form textarea {
     width: 500px;
     border: none;
-    padding: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-right: 2px;
     outline: none;
     font-size: 1.2em;
     font-family: inherit;
     resize: none;
     border-radius: 10px;
+    margin-bottom: 20px;
   }
 
   .formClose{
@@ -78,20 +81,20 @@
 
   .sendButton {
     position: absolute;
-    left: 40%;
+    left: 4%;
     bottom: 10px;
     height: 30px;
-    width: 100px; 
+    width: 120px; 
     display: flex;
     gap: 10px;
     justify-content: center;
     align-items: center; 
-    padding: 4px; 
-    background-color: #007bff; 
-    color: white; 
+    background-color:#FFA500; 
+    color: black; 
     border: none;
     border-radius: 5px; 
     cursor: pointer; 
+    
   }
   
   .sendButton img {
@@ -100,6 +103,20 @@
   }
   
   .sendButton:hover {
-    background-color: #0056b3; 
+    background-color: #ffa600d0; 
   }
   
+  .inputBox{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .inputBox h2{
+    font-size: 20px;
+    font-weight: 200;
+  }
+
+  .inputBox span{
+    color: rgb(244, 81, 81);
+  }
