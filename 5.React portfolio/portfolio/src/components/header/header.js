@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Link} from 'react-scroll';
 import './header.css'
+import Modal from '../ModalContainer/Modal';
 
 function Header() {
+
+  const[showModel,setModel] = useState(false);
+
+  function handleModel(){
+     setModel(!showModel);
+  }
+
   return (
     <div className='header'>
         <div className='header_left'>
@@ -24,7 +32,8 @@ function Header() {
             <Link to='contact' smooth='true' duration={700}>
             <h4>Contact</h4>
             </Link>
-            <h4 className='header_right_button'>Join me</h4>
+            <h4 className='header_right_button' onClick={()=>{handleModel()}}>Join me</h4>
+            {showModel&& <Modal onOverlay={()=>{handleModel()}}/>}
         </div>
     </div>
   )
