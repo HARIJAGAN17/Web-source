@@ -39,7 +39,7 @@ const projects = [
     {
         image:med3,
         title:"MedZone 3.0",
-        desc:"An accessible personal healthcare web app that utilizes PoseNet, React, Socket.io, and TensorFlow to enable users to consult doctors online, it's bolstered with blockchain technology leveraging Solidity and Web3 for enhanced security and crypto wallet payments.",
+        desc:"Accessible healthcare web app with PoseNet, React, TensorFlow for online consultations. Enhanced security and crypto payments with blockchain, Solidity, and Web3.",
         link:"https://health-link.netlify.app/home",
     },
    
