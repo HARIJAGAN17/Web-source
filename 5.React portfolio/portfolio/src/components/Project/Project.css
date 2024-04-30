@@ -7,8 +7,8 @@
 
 .projectCard{
    margin: 15px;
-   height: 260px;
-   width: 290px;
+   height: 220px;
+   width: 250px;
    transition: trasnform 100ms ease-in-out;
 
 }
