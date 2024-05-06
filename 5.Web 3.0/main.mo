@@ -9,3 +9,5 @@ actor Dbank {
 
   Debug.print(debug_show (id));
 };
+
+//canister value needed
