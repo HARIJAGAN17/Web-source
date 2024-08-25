@@ -114,3 +114,8 @@ class SimpleTestClass {
 
 let obj2:SimpleTestClass = new SimpleTestClass("harijagan",22);
 obj2.personalInfo();
+
+import { moduleTestClass } from "./moduleTest";
+
+let obj3:moduleTestClass  = new moduleTestClass("joe",24);
+obj3.personalInfo();

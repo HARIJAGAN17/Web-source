@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var id = 2;
 var company = "HJ";
 var isPassed = true;
@@ -68,3 +70,6 @@ var SimpleTestClass = /** @class */ (function () {
 }());
 var obj2 = new SimpleTestClass("harijagan", 22);
 obj2.personalInfo();
+var moduleTest_1 = require("./moduleTest");
+var obj3 = new moduleTest_1.moduleTestClass("joe", 24);
+obj3.personalInfo();
