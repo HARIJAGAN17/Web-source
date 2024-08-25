@@ -94,4 +94,23 @@ class TestClass {
 
 let obj1:TestClass = new TestClass("hari",22);
 
-obj1.personalInfo();
+// obj1.personalInfo();
+
+//simplify the code
+
+class SimpleTestClass {
+    private information: () => void;
+    personalInfo: () => void;
+
+    constructor(private Name: string, private age: number) {
+        this.information = () => {
+            console.log("Information method: Name:"+this.Name+" age:"+this.age);
+        };
+        this.personalInfo = () => {
+           this.information();
+        };
+    }
+}
+
+let obj2:SimpleTestClass = new SimpleTestClass("harijagan",22);
+obj2.personalInfo();

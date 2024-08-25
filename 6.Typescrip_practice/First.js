@@ -50,4 +50,21 @@ var TestClass = /** @class */ (function () {
     return TestClass;
 }());
 var obj1 = new TestClass("hari", 22);
-obj1.personalInfo();
+// obj1.personalInfo();
+//simplify the code
+var SimpleTestClass = /** @class */ (function () {
+    function SimpleTestClass(Name, age) {
+        var _this = this;
+        this.Name = Name;
+        this.age = age;
+        this.information = function () {
+            console.log("Information method: Name:" + _this.Name + " age:" + _this.age);
+        };
+        this.personalInfo = function () {
+            _this.information();
+        };
+    }
+    return SimpleTestClass;
+}());
+var obj2 = new SimpleTestClass("harijagan", 22);
+obj2.personalInfo();
