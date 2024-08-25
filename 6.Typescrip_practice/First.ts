@@ -30,3 +30,25 @@ let doMessage = (message:number)=>{
 }
 
 doMessage(222);
+
+//creating the own type through interface
+
+interface Point{
+
+    x:number,
+    y:string,
+    z:number
+} 
+
+
+let draw = (point:Point) =>{
+
+    console.log(point.x);
+    console.log(point.y);
+    console.log(point.z);
+}
+
+// draw({x:1,y:"hello",z:22});
+
+
+

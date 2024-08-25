@@ -20,3 +20,9 @@ var doMessage = function (message) {
     console.log(message);
 };
 doMessage(222);
+var draw = function (point) {
+    console.log(point.x);
+    console.log(point.y);
+    console.log(point.z);
+};
+draw({ x: 1, y: "hello", z: 22 });
