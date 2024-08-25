@@ -13,4 +13,10 @@ var colors;
 })(colors || (colors = {}));
 ;
 var background = colors.blue;
-console.log(background);
+//console.log(background);
+//type assertions
+//arrow functions 
+var doMessage = function (message) {
+    console.log(message);
+};
+doMessage(222);

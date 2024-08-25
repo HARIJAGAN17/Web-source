@@ -16,7 +16,17 @@ enum colors { red=100,blue,green};
 
 let background = colors.blue;
 
-console.log(background);
+//console.log(background);
 
 
 //type assertions
+
+
+//arrow functions 
+
+
+let doMessage = (message:number)=>{
+    console.log(message);
+}
+
+doMessage(222);
