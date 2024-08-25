@@ -68,5 +68,31 @@ let callFunction = ()=>{
     return 22;
 }
 
-console.log(FinalOutput({CallMessage:callFunction}));
+// console.log(FinalOutput({CallMessage:callFunction}));
 
+
+
+//Class
+
+class TestClass {
+    Name: string;
+    age: number;
+    information: () => void;
+    personalInfo: () => void;
+
+    constructor(name: string, age: number) {
+        this.Name = name;
+        this.age = age;
+        this.information = () => {
+            console.log("Information method: Name:"+this.Name+" age:"+this.age);
+        };
+        this.personalInfo = () => {
+           this.information();
+        };
+    }
+}
+
+let obj1:TestClass = new TestClass("hari",22);
+
+obj1.information();
+obj1.personalInfo();

@@ -33,4 +33,22 @@ var FinalOutput = function (obj) {
 var callFunction = function () {
     return 22;
 };
-console.log(FinalOutput({ CallMessage: callFunction }));
+// console.log(FinalOutput({CallMessage:callFunction}));
+//Class
+var TestClass = /** @class */ (function () {
+    function TestClass(name, age) {
+        var _this = this;
+        this.Name = name;
+        this.age = age;
+        this.information = function () {
+            console.log("Information method: Name:" + _this.Name + " age:" + _this.age);
+        };
+        this.personalInfo = function () {
+            _this.information();
+        };
+    }
+    return TestClass;
+}());
+var obj1 = new TestClass("hari", 22);
+obj1.information();
+obj1.personalInfo();
