@@ -75,9 +75,9 @@ let callFunction = ()=>{
 //Class
 
 class TestClass {
-    Name: string;
-    age: number;
-    information: () => void;
+    private Name: string;
+    private age: number;
+    private information: () => void;
     personalInfo: () => void;
 
     constructor(name: string, age: number) {
@@ -94,5 +94,4 @@ class TestClass {
 
 let obj1:TestClass = new TestClass("hari",22);
 
-obj1.information();
 obj1.personalInfo();

@@ -50,5 +50,4 @@ var TestClass = /** @class */ (function () {
     return TestClass;
 }());
 var obj1 = new TestClass("hari", 22);
-obj1.information();
 obj1.personalInfo();
