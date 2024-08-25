@@ -29,7 +29,7 @@ let doMessage = (message:number)=>{
     console.log(message);
 }
 
-doMessage(222);
+//doMessage(222);
 
 //creating the own type through interface
 
@@ -50,5 +50,23 @@ let draw = (point:Point) =>{
 
 // draw({x:1,y:"hello",z:22});
 
+//class
+interface InterfaceClass{
+    CallMessage:()=>number
+}
 
+
+let FinalOutput = (obj:InterfaceClass)=>{
+  return obj.CallMessage();
+}
+
+// function interfaceFunction (){
+//     return 2;
+// }
+
+let callFunction = ()=>{
+    return 22;
+}
+
+console.log(FinalOutput({CallMessage:callFunction}));
 

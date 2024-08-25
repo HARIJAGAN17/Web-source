@@ -19,10 +19,18 @@ var background = colors.blue;
 var doMessage = function (message) {
     console.log(message);
 };
-doMessage(222);
 var draw = function (point) {
     console.log(point.x);
     console.log(point.y);
     console.log(point.z);
 };
-draw({ x: 1, y: "hello", z: 22 });
+var FinalOutput = function (obj) {
+    return obj.CallMessage();
+};
+// function interfaceFunction (){
+//     return 2;
+// }
+var callFunction = function () {
+    return 22;
+};
+console.log(FinalOutput({ CallMessage: callFunction }));
