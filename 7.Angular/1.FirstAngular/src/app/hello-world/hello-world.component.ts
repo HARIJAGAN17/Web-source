@@ -7,14 +7,18 @@ import { Component } from '@angular/core';
 })
 export class HelloWorldComponent {
   title ="helloword";
-  count=0;
-  countDuplicate=0;
+  // count=0;
+  // countDuplicate=0;
 
-  increaseCount(){
-    this.count++;
+  // increaseCount(){
+  //   this.count++;
+  // }
+  value:string=""
+  value2:string=""
+  handleInput(event:Event){
+
+    this.value = (event.target as HTMLInputElement).value;
   }
-
-
 
   
 }
