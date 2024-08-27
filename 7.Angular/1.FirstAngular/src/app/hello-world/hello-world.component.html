@@ -1,4 +1,6 @@
-<p>hello-world works!</p>
-<h1>{{title}}</h1>
 
-<input id="titleid" type="text" [(ngModel)]="title">
+<h1>your count value {{count}}</h1>
+
+<button (click)="increaseCount();countDuplicate=count">Increase!</button>
+
+<p>duplicate value of this event above {{countDuplicate}}</p>

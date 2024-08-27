@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HelloWorldComponent {
   title ="helloword";
+  count=0;
+  countDuplicate=0;
+
+  increaseCount(){
+    this.count++;
+  }
+
 
 
   
