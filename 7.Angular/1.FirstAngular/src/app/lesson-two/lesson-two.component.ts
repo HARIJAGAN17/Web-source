@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class LessonTwoComponent {
       num:number=0
+
+      showme = true
 }

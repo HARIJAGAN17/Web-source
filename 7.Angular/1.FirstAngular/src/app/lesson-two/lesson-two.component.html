@@ -8,3 +8,11 @@
     <h1 *ngSwitchCase="3">Hello three</h1>
     <h1 *ngSwitchCase="4">Hello four</h1>
 </div>
+
+
+<h1>Ng if example</h1>
+<div class="row">
+    <label for="">Checkbox <input type="checkbox" [(ngModel)]="showme"></label>
+</div>
+<p *ngIf="showme">Yes it is true</p>
+<p *ngIf="!showme">Yes it is false</p>
