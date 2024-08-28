@@ -1,0 +1,10 @@
+<input type="text" [(ngModel)]="num">
+
+<h1>{{num}}</h1>
+
+<div [ngSwitch]="num">
+    <h1 *ngSwitchCase="1">Hello one</h1>
+    <h1 *ngSwitchCase="2">Hello two</h1>
+    <h1 *ngSwitchCase="3">Hello three</h1>
+    <h1 *ngSwitchCase="4">Hello four</h1>
+</div>
