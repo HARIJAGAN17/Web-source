@@ -16,3 +16,36 @@
 
 <!-- ---------------------------------------------------------------------------------------------------------------------- -->
  
+<!-- Directives -->
+
+<!-- for directives -->
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        {{title}}
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>S.no</th>
+                        <th>title</th>
+                        <th>director</th>
+                        <th>rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let mov of movieList; let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{mov.title}}</td>
+                        <td>{{mov.director}}</td>
+                        <td>{{mov.rating}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+

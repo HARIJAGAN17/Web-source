@@ -20,5 +20,35 @@ export class HelloWorldComponent {
     this.value = (event.target as HTMLInputElement).value;
   }
 
+  movieList= [
+    {
+        title: "Inception",
+        director: "Christopher Nolan",
+        rating: 8.8
+    },
+    {
+        title: "The Matrix",
+        director: "The Wachowskis",
+        rating: 8.7
+    },
+    {
+        title: "Parasite",
+        director: "Bong Joon-ho",
+        rating: 8.6
+    },
+    {
+        title: "The Shawshank Redemption",
+        director: "Frank Darabont",
+        rating: 9.3
+    },
+    {
+        title: "Pulp Fiction",
+        director: "Quentin Tarantino",
+        rating: 8.9
+    }
+]
+
+
+
   
 }
