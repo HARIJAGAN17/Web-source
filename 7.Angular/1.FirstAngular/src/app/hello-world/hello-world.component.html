@@ -5,8 +5,14 @@
 
 <p>duplicate value of this event above {{countDuplicate}}</p> -->
 
+
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
+
 <input type="text" placeholder="enter the name" (input)="handleInput($event);">
 <p>The typed name is {{value}}</p>
 
 <input type="text" placeholder="without function" (input)="value2=$any($event.target).value">
 <h1>{{value2}}</h1>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+ 
