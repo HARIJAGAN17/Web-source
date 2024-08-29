@@ -1,4 +1,4 @@
-<input type="text" [(ngModel)]="num">
+<!-- <input type="text" [(ngModel)]="num">
 
 <h1>{{num}}</h1>
 
@@ -15,4 +15,12 @@
     <label for="">Checkbox <input type="checkbox" [(ngModel)]="showme"></label>
 </div>
 <p *ngIf="showme">Yes it is true</p>
-<p *ngIf="!showme">Yes it is false</p>
+<p *ngIf="!showme">Yes it is false</p> -->
+
+
+<!-- ------------------------------------------------------------------------------------------------- -->
+ <!-- pipes -->
+
+ <h1>unformatted date:{{toDate}}</h1>
+ <h2>short date:{{toDate|date:'short'}}</h2>
+ <h2>short only date:{{toDate|date:'shortDate'}}</h2>

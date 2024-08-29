@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { FormsModule } from '@angular/forms';
 import { LessonTwoComponent } from './lesson-two/lesson-two.component';
+import { FormComponent } from './form/form.component';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloWorldComponent,
-    LessonTwoComponent
+    LessonTwoComponent,
+    FormComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
