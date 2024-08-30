@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { LessonTwoComponent } from './lesson-two/lesson-two.component';
 import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
+import { FormChildComponent } from './childtoParent/form-child/form-child.component';
+import { ListParentComponent } from './childtoParent/list-parent/list-parent.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { ListComponent } from './list/list.component';
     HelloWorldComponent,
     LessonTwoComponent,
     FormComponent,
-    ListComponent
+    ListComponent,
+    FormChildComponent,
+    ListParentComponent
   ],
   imports: [
     BrowserModule,
