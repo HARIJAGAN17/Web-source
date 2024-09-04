@@ -9,6 +9,8 @@ import { RegisterComponent } from './components/home/register/register.component
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/home/login/login.component';
 import { LandingcontentComponent } from './components/home/landingcontent/landingcontent.component';
+import { ProviderLayoutComponent } from './components/providerpage/provider-layout/provider-layout.component';
+import { ProvidercontentComponent } from './components/providerpage/providercontent/providercontent.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { LandingcontentComponent } from './components/home/landingcontent/landin
     RegisterComponent,
     FooterComponent,
     LoginComponent,
-    LandingcontentComponent
+    LandingcontentComponent,
+    ProviderLayoutComponent,
+    ProvidercontentComponent
   ],
   imports: [
     BrowserModule,
